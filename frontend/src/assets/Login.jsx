@@ -28,7 +28,7 @@ function Login({ client, setnumber, setpin, sendDetails }) {
   const pinfull = pinString.length === 4;
 
   // API URL - Use environment variable or fallback
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Function to handle PIN input and auto-focus next field
   const handlePinInput = (pinNumber, value, setter) => {

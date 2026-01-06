@@ -8,31 +8,66 @@ require("dotenv").config();
 const app = express();
 
 // ✅ Configure CORS properly
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       // Allow all origins or specify your frontend URLs
+//       const allowedOrigins = [
+//         "http://localhost:3000",
+//         "http://localhost:5173",
+//         "https://kashagi-loans-application-l.onrender.com",
+//         process.env.FRONTEND_URL,
+//       ].filter(Boolean);
+
+//       if (
+//         !origin ||
+//         allowedOrigins.includes(origin) ||
+//         allowedOrigins.includes("*")
+//       ) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   })
+// );
+
+// const allowedOrigins = [
+//   "http://localhost:3000",
+//   "http://localhost:5173",
+//   "https://kashagi-loans-application-1.onrender.com",
+//   "https://kashagi-loans-application-l.onrender.com",
+//   process.env.FRONTEND_URL,
+// ].filter(Boolean);
+
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       // Allow requests with no origin
+//       if (!origin) return callback(null, true);
+
+//       if (allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         console.log("❌ CORS blocked origin:", origin);
+//         console.log("✅ Allowed origins:", allowedOrigins);
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   })
+// );
+
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow all origins or specify your frontend URLs
-      const allowedOrigins = [
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "https://kashagi-loans-application-l.onrender.com",
-        process.env.FRONTEND_URL,
-      ].filter(Boolean);
-
-      if (
-        !origin ||
-        allowedOrigins.includes(origin) ||
-        allowedOrigins.includes("*")
-      ) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
+    origin: "*", // Allow everything
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
+
 app.use(express.json());
 
 // ✅ Validate environment variables
