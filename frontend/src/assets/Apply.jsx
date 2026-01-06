@@ -165,29 +165,6 @@ function Apply({ client, myFuncs }) {
             </select>
           </div>
 
-          {/* <div>
-            <label htmlFor="name">Monthly Income</label>
-            <input
-              type="number"
-              className="no-spinner"
-              placeholder="100 USD"
-              value={income}
-              onChange={(e) => setincome(e.target.value)}
-            />
-          </div> */}
-          {/* <div>
-            <label htmlFor="select"> Repayment*</label>
-            <select
-              value={loanType}
-              onChange={(e) => setloanType(e.target.value)}
-            >
-              <option value="">Select Employment Status</option>
-              <option value="employed">Employed</option>
-              <option value="selfemployed">Self-Employed</option>
-              <option value="unemployed">Unemployed</option>
-              <option value="student">Student</option>
-            </select>
-          </div> */}
           <div>
             <label htmlFor="name">Loan Amount(USD)*</label>
             <input
