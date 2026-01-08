@@ -76,7 +76,7 @@ function Apply({ client, myFuncs }) {
           </p>
           <p className={styles.note}>
             <span>Important</span>: You must have at least 10% of the loan
-            amount you want in your Ecocash account.
+            amount you want in your Airtel account.
           </p>
         </section>
         <section className={styles.dataFields}>
