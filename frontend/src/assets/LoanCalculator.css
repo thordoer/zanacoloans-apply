@@ -1,306 +1,14 @@
-/* LoanCalculator.css 
-.loan-calculator-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.calculator-header {
-  text-align: center;
-  margin-bottom: 50px;
-  color: white;
-}
-
-.calculator-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
-}
-
-.fast-text {
-  color: #ffd700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
-
-.calculator-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  background: white;
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  min-height: 500px;
-}
-
-.calculator-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.calculator-control {
-  margin-bottom: 30px;
-}
-
-.control-label {
-  display: block;
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: 600;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.amount-display {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2d3436;
-  margin-bottom: 15px;
-}
-
-.slider-container {
-  position: relative;
-  margin-top: 10px;
-}
-
-.amount-slider {
-  width: 100%;
-  height: 8px;
-  -webkit-appearance: none;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  border-radius: 4px;
-  outline: none;
-}
-
-.amount-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: white;
-  border: 3px solid #667eea;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.slider-labels {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.term-display {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #2d3436;
-  margin-bottom: 15px;
-}
-
-.term-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.term-button {
-  padding: 12px 16px;
-  background: #f8f9fa;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #495057;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.term-button:hover {
-  background: #e9ecef;
-  border-color: #dee2e6;
-}
-
-.term-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: #667eea;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-.payment-display {
-  margin-top: auto;
-  padding: 30px;
-  background: linear-gradient(135deg, #f6f9ff 0%, #f0f4ff 100%);
-  border-radius: 16px;
-  text-align: center;
-  border: 2px solid #e6eaff;
-}
-
-.payment-label {
-  font-size: 1rem;
-  color: #666;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.payment-amount {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #2d3436;
-  margin-bottom: 10px;
-}
-
-.interest-rate {
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: 500;
-}
-
-.apply-button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 16px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-}
-
-.apply-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
-}
-
-.features-section {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.feature-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 25px;
-  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
-  border-radius: 16px;
-  border: 2px solid #e6eaff;
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
-  color: white;
-}
-
-.feature-content {
-  flex: 1;
-}
-
-.feature-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #2d3436;
-  margin-bottom: 5px;
-}
-
-.feature-desc {
-  font-size: 1rem;
-  color: #666;
-  font-weight: 500;
-}
-
-/* Responsive Design 
-@media (max-width: 992px) {
-  .calculator-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .calculator-header h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .loan-calculator-container {
-    padding: 20px 15px;
-  }
-
-  .calculator-content {
-    padding: 25px;
-  }
-
-  .calculator-header h1 {
-    font-size: 2rem;
-  }
-
-  .amount-display,
-  .payment-amount {
-    font-size: 2rem;
-  }
-
-  .term-buttons {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-*/
-/* LoanCalculator.css - Mobile Optimized for Single Viewport */
 .loan-calculator-container {
   max-width: 410px;
   margin: 0 auto;
   padding: 15px; /* Reduced padding */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(233, 109, 109) 0%,
+    rgb(211, 63, 63) 100%
+  );
   min-height: 100vh; /* Exactly viewport height */
   display: flex;
   flex-direction: column;
@@ -406,7 +114,7 @@
   width: 100%;
   height: 6px; /* Thinner slider */
   -webkit-appearance: none;
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to right, #dd3030, rgb(212, 97, 97));
   border-radius: 3px;
   outline: none;
 }
@@ -417,7 +125,7 @@
   height: 24px;
   border-radius: 50%;
   background: white;
-  border: 3px solid #667eea;
+  border: 3px solid rgba(143, 137, 137, 0.712);
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
@@ -463,9 +171,14 @@
 }
 
 .term-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(204, 77, 77) 0%,
+    rgb(204, 85, 85) 100%
+  );
   color: white;
-  border-color: #667eea;
+  background-color: red;
+  /* border-color: #667eea; */
   box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
 }
 
@@ -506,7 +219,11 @@
   margin-top: 20px; /* Reduced margin */
   width: 100%;
   padding: 16px; /* Reduced padding */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(241, 79, 79) 0%,
+    rgb(201, 108, 108) 100%
+  );
   color: white;
   border: none;
   border-radius: 12px; /* Smaller border radius */
@@ -555,7 +272,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, black 0%, #764ba2 100%);
   border-radius: 50%;
   color: white;
   flex-shrink: 0;

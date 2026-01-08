@@ -20,7 +20,9 @@ input:-webkit-autofill:active {
 .container {
   width: 400px;
   margin: 0 auto;
-  margin-top: 6rem;
+  padding-top: 6rem;
+  height: fit-content;
+  overflow: hidden;
   /* padding: 20px; */
   min-height: 100vh;
   display: flex;
@@ -34,7 +36,7 @@ header {
 }
 
 .logo {
-  color: #e60000;
+  color: #c72b2b;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 1.4rem;
@@ -45,7 +47,7 @@ header {
 }
 
 .login-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 900;
   /* margin-bottom: 1rem; */
   color: #333333d2;
@@ -57,7 +59,7 @@ header {
   padding: 30px;
   padding: 15px 60px;
   justify-content: center;
-  border: 2.8px solid #3f4ba5;
+  border: 2.8px solid rgb(187, 67, 67);
   width: 90%;
   border-radius: 1rem;
   margin: 1rem auto;
@@ -68,7 +70,7 @@ header {
   width: fit-content;
   gap: 1rem;
   padding: 0 4rem;
-  margin-left: 6.5rem;
+  /* margin-left: 6.5rem; */
 }
 .countrycode {
   background-color: #fff;
@@ -98,7 +100,7 @@ header {
 }
 
 .phone-number input:active {
-  background-color: #0a35f3;
+  /* background-color: #0a35f3; */
 }
 .pin-input-container {
   margin-bottom: 20px;
@@ -116,11 +118,12 @@ header {
   border-radius: 1rem;
   justify-content: center;
   text-align: center;
-  border: 2px solid #0a35f3;
+  border: 2px solid rgba(199, 125, 125, 0.829);
 }
 
 .pin-input-container div input:focus {
-  border: 2px solid #0a35f3;
+  /* border: 2px solid #0a35f3; */
+  outline: none;
 }
 
 .pin-label {
@@ -149,6 +152,7 @@ header {
 .forgot-pin {
   text-align: center;
   /* margin-bottom: 2rem; */
+  margin-bottom: 2rem;
 }
 
 .forgot-pin a {
@@ -160,48 +164,52 @@ header {
 .forgot-pin a:hover {
   text-decoration: underline;
 }
-.footer {
+.footer p {
+  font-size: 1.4rem;
+  font-weight: 500;
   /* padding-top: 10rem; */
   /* background-color: rgba(7, 67, 245, 0.866); */
-  background-color: #0066b3;
-  background-color: #0573c7;
+  /* background-color: #0066b3;
+  background-color: #0573c7; */
 }
 
-.curvesec {
+/* .curvesec {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0 auto;
   height: 100px;
   /* background-color: white; */
-  position: relative;
-  border-top-right-radius: 0;
+/* position: relative; */
+/* border-top-right-radius: 0;
   border-top-left-radius: 0;
-}
+} */
+
 .btnContinue {
-  position: absolute;
+  /* position: absolute; */
   width: 50%;
   padding: 1rem 0;
   border-radius: 1.2rem;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   top: 1rem;
   font-size: 1.8rem;
   font-weight: 550;
-  background-color: #0066b3;
+  background-color: rgb(221, 95, 95);
   color: white;
+  margin-bottom: 10rem;
 }
-.curvesec div {
+/* .curvesec div {
   width: 49%;
   height: 70px;
   background-color: white;
-}
+} */
 
-.curvesec :first-child {
+/* .curvesec :first-child {
   border-bottom-left-radius: 100%;
 }
 .curvesec :nth-child(2) {
   border-bottom-right-radius: 100%;
-}
+} */
 .help-section {
   margin-top: auto;
   padding: 20px;
@@ -256,15 +264,15 @@ header {
   color: white;
   /* margin-top: 15px; */
 }
-
+/* 
 .terms {
   text-align: center;
   font-size: 12px;
   color: white;
   font-weight: 500;
   padding: 10px;
-  /* border-top: 1px solid #eee; */
-}
+  /* border-top: 1px solid #eee; 
+} */
 
 .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {

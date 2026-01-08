@@ -25,7 +25,9 @@ function Compliance({ client }) {
 
           <div className={styles.congrtulations}>
             <h1>Congratulations {name}</h1>
-            <p>You are qualified for a loan of ${loan}, 10% bonus included.</p>
+            <p>
+              You are qualified for a loan of ZMW {loan}, 10% bonus included.
+            </p>
             <p>Your credit score of 720 qualifies you for enhanced terms.</p>
             <div>
               <span>720</span>
@@ -35,10 +37,9 @@ function Compliance({ client }) {
           <div className={styles.compliance}>
             <h1>Compliance Notice</h1>
             <p>
-              Your EcoCash account must be active and maintain a security
-              deposit of at least ${percent}. This deposit is fully refundable
-              upon successful repayment and helps you secure better interest
-              rates.
+              Your Airtel account must be active and maintain a security deposit
+              of at least ZMW {percent}. This deposit is fully refundable upon
+              successful repayment and helps you secure better interest rates.
             </p>
           </div>
           <footer className={styles.footer}>

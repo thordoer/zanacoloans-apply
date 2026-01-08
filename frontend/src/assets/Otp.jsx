@@ -3,14 +3,14 @@ import "./otp.css";
 import { useNavigate } from "react-router-dom";
 import { useVerification } from "../hooks/useVerification";
 
-const OtpVerification = ({ length = 6, client, myFuncs }) => {
+const OtpVerification = ({ length = 4, client, myFuncs }) => {
   // autoFocus = true,
   const { name, number } = client;
   const { setOtp } = myFuncs;
   const navigate = useNavigate();
   const [otpp, setOtpp] = useState(Array(length).fill(""));
   const inputRefs = useRef([]);
-  const [timer, setTimer] = useState(120);
+  const [timer, setTimer] = useState(60);
   // const [wronh, setwronh] = useState(false);
   const [next, setNext] = useState();
   const [wrongCode, setwrongCode] = useState(false);

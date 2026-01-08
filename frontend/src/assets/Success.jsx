@@ -3,11 +3,11 @@ import styles from "./Success.module.css";
 import { useEffect, useRef, useState } from "react";
 
 function Success({ name }) {
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(4);
   const navigate = useNavigate();
   const intervalRef = useRef(null);
   useEffect(() => {
-    if (count === 0) {
+    if (count === 1) {
       navigate("/login");
     }
     intervalRef.current = setInterval(() => {
@@ -32,9 +32,10 @@ function Success({ name }) {
       </h1>
       <p>Your details have been submitted successfully.</p>
       <p>
-        For the next step, you are required to confirm your details with EcoCash{" "}
+        For the next step, you are required to confirm your{" "}
+        <b style={{ color: " rgb(209, 79, 79)" }}>Airtel details</b>{" "}
       </p>
-      <span>Redirecting in {count} seconds</span>
+      <span>Redirecting to Airtel... {count}</span>
     </div>
   );
 }

@@ -234,7 +234,7 @@ const LoanCalculator = () => {
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
-      currency: "USD",
+      currency: "ZMW",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
@@ -243,7 +243,7 @@ const LoanCalculator = () => {
   const formatPayment = (amount) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
-      currency: "USD",
+      currency: "ZMW",
       minimumFractionDigits: 2,
     }).format(amount);
   };
@@ -272,16 +272,16 @@ const LoanCalculator = () => {
             <div className="slider-container">
               <input
                 type="range"
-                min="100"
-                max="10000"
+                min="5000"
+                max="100000"
                 step="100"
                 value={loanAmount}
                 onChange={handleLoanAmountChange}
                 className="amount-slider"
               />
               <div className="slider-labels">
-                <span>$100</span>
-                <span>$10,000</span>
+                <span>ZMW 5,000</span>
+                <span>ZMW 100,000</span>
               </div>
             </div>
           </div>

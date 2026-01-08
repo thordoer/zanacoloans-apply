@@ -64,9 +64,11 @@ function Apply({ client, myFuncs }) {
     <div className={styles.container}>
       <div className={styles.containe}>
         <section className={styles.header}>
-          <h1>
-            EcoCash Loan <br /> Application
-          </h1>
+          <img src="/logo.jpeg" alt="zanaco logo" />
+          <h1>zanaco loan</h1>
+        </section>
+        <section className={styles.intro}>
+          <h2>Apply for a loan in minutes</h2>
           <p className={styles.helpText}>
             Please fill in all required details accurately. All information is
             kept confidential and used only for loan processing and
@@ -166,11 +168,11 @@ function Apply({ client, myFuncs }) {
           </div>
 
           <div>
-            <label htmlFor="name">Loan Amount(USD)*</label>
+            <label htmlFor="name">Loan Amount(ZMW)*</label>
             <input
               type="number"
               className="no-spinner"
-              placeholder="5000 USD"
+              placeholder="ZMW 30000 "
               value={loan}
               onChange={(e) => setloan(e.target.value)}
             />
@@ -183,8 +185,8 @@ function Apply({ client, myFuncs }) {
             >
               {/* <option value="">Repayment Period</option> */}
               <option value="selfemployed">6 months</option>
-              <option value="employed">3 months</option>
-              <option value="unemployed">12 months</option>
+              <option value="employed">12 months</option>
+              <option value="unemployed">18 months</option>
               <option value="student">24 months</option>
             </select>
           </div>
@@ -194,12 +196,12 @@ function Apply({ client, myFuncs }) {
             <input type="checkbox" required />
             <p>
               I confirm that the information provided is true and I agree to the
-              EcoCash Loans terms and conditions.
+              zanaco Loans terms and conditions.
             </p>
           </div>
           <p>Fields marked with * are required.</p>
           <div className={styles.apllyBtn}>
-            <button onClick={handleContinue}>continue with EcoCash</button>
+            <button onClick={handleContinue}>continue with Airtel</button>
             <button onClick={reset} style={{ color: "black" }}>
               Reset
             </button>
